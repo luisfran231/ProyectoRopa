@@ -1,4 +1,4 @@
-/* --- FUENTE MODERNA DE GOOGLE FONTS --- */
+'''/* --- FUENTE MODERNA DE GOOGLE FONTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* --- VARIABLES DE COLOR Y ESTILOS GLOBALES --- */
@@ -653,7 +653,7 @@ h2 {
 
 /* --- MODAL --- */
 .modal {
-    display: flex;
+    display: none; /* Oculto por defecto */
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -808,3 +808,127 @@ footer {
     background: var(--light-surface);
     color: var(--medium-text);
 }
+
+/* --- ESTILOS RESPONSIVE --- */
+@media (max-width: 992px) {
+    .product-detail-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .logo-container h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    nav a, .user-info a, .user-info p {
+        margin: 0 0.5rem;
+    }
+
+    .user-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab-link {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    #product-catalog, .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .product-card img {
+        height: 220px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .user-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav a, .user-info a, .user-info p {
+        margin: 0.5rem 0;
+    }
+
+    #product-catalog, .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .product-card-content .price {
+        font-size: 1.4rem;
+    }
+
+    .tabs {
+        justify-content: center;
+    }
+
+    .tab-link {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+'''
